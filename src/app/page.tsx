@@ -6,6 +6,7 @@ import HeroHeading from "@/components/HeroHeading";
 import HeroCTAs from "@/components/HeroCTAs";
 import LogoGrid from "@/components/LogoGrid";
 import Testimonials from "@/components/Testimonials";
+import ServicesDropdown from "@/components/ServicesDropdown";
 import FAQ from "@/components/FAQ";
 
 export default function Home() {
@@ -18,7 +19,7 @@ export default function Home() {
             <span className="text-sm font-semibold tracking-wide">BONDON Agency</span>
           </div>
           <nav className="hidden sm:flex items-center gap-6 text-sm">
-            <Link className="hover:opacity-80" href="/tjanster">Tjänster</Link>
+            <ServicesDropdown />
             <Link className="hover:opacity-80" href="#case">Case</Link>
             <Link className="hover:opacity-80" href="#kontakt">Kontakt</Link>
             <Link className="hover:opacity-80" href="#faq">FAQ</Link>
