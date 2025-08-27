@@ -4,6 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
+    "dev:4001": "PORT=4001 next dev --turbopack",
+    "dev:port": "next dev --turbopack -p $PORT",
     "build": "next build --turbopack",
     "start": "next start",
     "lint": "eslint"
