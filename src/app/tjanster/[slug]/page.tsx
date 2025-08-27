@@ -46,6 +46,19 @@ export default function ServiceDetail({ params }: Params) {
           <Link href="/tjanster" className="inline-flex h-10 items-center rounded-md border border-foreground/20 px-4 text-sm font-medium hover:bg-foreground/5">Tillbaka</Link>
         </div>
       </Section>
+
+      <Section>
+        <div className="rounded-xl border border-foreground/10 p-6 sm:p-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+          <div>
+            <h3 className="text-lg font-semibold">Redo att ta nästa steg?</h3>
+            <p className="mt-1 text-sm text-foreground/80">Se våra paket eller hör av dig så skräddarsyr vi en plan.</p>
+          </div>
+          <div className="flex items-center gap-3">
+            <Link href="/#priser" className="inline-flex h-10 items-center rounded-md border border-foreground/20 px-4 text-sm font-medium hover:bg-foreground/5">Se priser</Link>
+            <Link href="/#kontakt" className="inline-flex h-10 items-center rounded-md bg-foreground px-4 text-background text-sm font-medium hover:opacity-90">Kontakta oss</Link>
+          </div>
+        </div>
+      </Section>
     </main>
   );
 }
