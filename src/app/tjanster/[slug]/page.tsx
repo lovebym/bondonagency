@@ -10,6 +10,30 @@ const content: Record<string, { title: string; body: string[] }> = {
       "Varianttestning och lärande per kanal.",
     ],
   },
+  performance: {
+    title: "Performance",
+    body: [
+      "Kanalstrategi, budget och attribution.",
+      "Kampanjstruktur för skala och lärande.",
+      "Daglig optimering och rapport per sprint.",
+    ],
+  },
+  branding: {
+    title: "Branding",
+    body: [
+      "Varumärkesplattform och tonalitet.",
+      "Guidelines för kreativa format och innehåll.",
+      "Brand‑lift och kvalitativa mätpunkter.",
+    ],
+  },
+  crm: {
+    title: "CRM & Retention",
+    body: [
+      "Kundresa, segment och onboarding‑flöden.",
+      "Marketing automation och experiment.",
+      "Retention/Kohorter, CLV och re‑aktivering.",
+    ],
+  },
   produktion: {
     title: "Produktion",
     body: [

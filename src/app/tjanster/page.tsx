@@ -17,6 +17,21 @@ const services = [
     name: "Analys",
     desc: "Experiment, mätning och insikter. Dashboard och tydliga beslut varje sprint.",
   },
+  {
+    slug: "performance",
+    name: "Performance",
+    desc: "Planering, budget och optimering i betalda kanaler (Meta, TikTok, Google).",
+  },
+  {
+    slug: "branding",
+    name: "Branding",
+    desc: "Varumärkesplattform, tonalitet och kreativa riktlinjer för skalbar produktion.",
+  },
+  {
+    slug: "crm",
+    name: "CRM & Retention",
+    desc: "E‑post/marketing automation, onboarding‑flöden och aktivering för högre LTV.",
+  },
 ];
 
 export default function ServicesPage() {
