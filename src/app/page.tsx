@@ -18,9 +18,10 @@ export default function Home() {
             <span className="text-sm font-semibold tracking-wide">BONDON Agency</span>
           </div>
           <nav className="hidden sm:flex items-center gap-6 text-sm">
-            <Link className="hover:opacity-80" href="#tjanster">Tjänster</Link>
+            <Link className="hover:opacity-80" href="/tjanster">Tjänster</Link>
             <Link className="hover:opacity-80" href="#case">Case</Link>
             <Link className="hover:opacity-80" href="#kontakt">Kontakt</Link>
+            <Link className="hover:opacity-80" href="#faq">FAQ</Link>
           </nav>
           <div className="hidden sm:block"><ThemeToggle /></div>
         </div>
@@ -162,7 +163,12 @@ export default function Home() {
       <footer className="border-t border-foreground/10">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 h-14 flex items-center justify-between text-sm">
           <span>BONDON Agency © {new Date().getFullYear()}</span>
-          <a className="hover:opacity-80" href="mailto:hello@bondon.agency">hello@bondon.agency</a>
+          <div className="hidden sm:flex items-center gap-4">
+            <Link className="hover:opacity-80" href="#case">Case</Link>
+            <Link className="hover:opacity-80" href="#priser">Priser</Link>
+            <Link className="hover:opacity-80" href="#faq">FAQ</Link>
+            <a className="hover:opacity-80" href="mailto:hello@bondon.agency">hello@bondon.agency</a>
+          </div>
         </div>
       </footer>
     </div>
