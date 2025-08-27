@@ -4,7 +4,8 @@ import ContactForm from "@/components/ContactForm";
 import ThemeToggle from "@/components/ThemeToggle";
 import HeroHeading from "@/components/HeroHeading";
 import HeroCTAs from "@/components/HeroCTAs";
-import SocialProof from "@/components/SocialProof";
+import LogoGrid from "@/components/LogoGrid";
+import Testimonials from "@/components/Testimonials";
 import FAQ from "@/components/FAQ";
 
 export default function Home() {
@@ -43,8 +44,8 @@ export default function Home() {
           </div>
         </Section>
 
-        {/* Social Proof */}
-        <SocialProof />
+        {/* Logotyper */}
+        <LogoGrid />
 
         {/* Tjänster / Pelare */}
         <Section id="tjanster" title="Vad vi optimerar" subtitle="Allt vi gör är byggt för hastighet, kvalitet och lärande.">
@@ -69,6 +70,9 @@ export default function Home() {
             </div>
           </div>
         </Section>
+
+        {/* Testimonials */}
+        <Testimonials />
 
         {/* Case */}
         <Section id="case" title="Case" subtitle="Snabba tester, mätbar effekt och iterativ förbättring.">
