@@ -12,7 +12,7 @@ export default function Home() {
         <div className="mx-auto max-w-6xl px-4 sm:px-6 h-16 flex items-center justify-between">
           <div className="flex items-center gap-2 group">
             <span className="inline-block h-3 w-3 rounded-full bg-foreground transition-transform group-hover:scale-110" />
-            <span className="text-sm font-semibold tracking-wide">BONDON</span>
+            <span className="text-sm font-semibold tracking-wide">BONDON Agency</span>
           </div>
           <nav className="hidden sm:flex items-center gap-6 text-sm">
             <Link className="hover:opacity-80" href="#tjanster">Tjänster</Link>
@@ -149,7 +149,7 @@ export default function Home() {
 
       <footer className="border-t border-foreground/10">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 h-14 flex items-center justify-between text-sm">
-          <span>BONDON © {new Date().getFullYear()}</span>
+          <span>BONDON Agency © {new Date().getFullYear()}</span>
           <a className="hover:opacity-80" href="mailto:hello@bondon.agency">hello@bondon.agency</a>
         </div>
       </footer>

@@ -15,14 +15,14 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "BONDON — AI‑driven kreativ & digital marknadsföring",
-    template: "%s — BONDON",
+    default: "BONDON Agency — AI‑driven kreativ & digital marknadsföring",
+    template: "%s — BONDON Agency",
   },
   description:
     "AI-baserad byrå som maximerar kreativitet, produktion och analys. Snabbare leveranser, bättre resultat.",
   metadataBase: new URL("https://bondon.agency"),
   openGraph: {
-    title: "BONDON — AI‑driven kreativ & digital marknadsföring",
+    title: "BONDON Agency — AI‑driven kreativ & digital marknadsföring",
     description:
       "AI-baserad byrå som maximerar kreativitet, produktion och analys.",
     type: "website",

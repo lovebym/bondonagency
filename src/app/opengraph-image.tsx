@@ -19,7 +19,7 @@ export default function Image() {
           fontSize: 48,
         }}
       >
-        <div style={{ fontSize: 20, opacity: 0.8 }}>BONDON</div>
+        <div style={{ fontSize: 20, opacity: 0.8 }}>BONDON Agency</div>
         <div style={{ maxWidth: 900, lineHeight: 1.1 }}>
           AI‑driven kreativ och digital marknadsföring
         </div>
