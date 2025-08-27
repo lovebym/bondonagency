@@ -47,6 +47,7 @@ export default function ContactForm() {
       if (!res.ok) {
         throw new Error((data && data.error) || "Något gick fel");
       }
+      try { (await import("@/lib/analytics")).track({ name: "form_submit", props: { source: "landing" } }); } catch {}
       setSuccess("Tack! Vi återkommer inom kort.");
       setForm({ name: "", email: "", message: "", budget: "" });
     } catch (err: unknown) {

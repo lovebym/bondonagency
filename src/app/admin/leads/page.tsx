@@ -10,6 +10,7 @@ type Lead = {
   message: string;
   budget?: string;
   source?: string;
+  contacted?: boolean;
 };
 
 async function readLeads(): Promise<Lead[]> {

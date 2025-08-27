@@ -37,7 +37,7 @@ export async function POST(req: NextRequest) {
     await ensureDataFile();
 
     const now = new Date().toISOString();
-    const record = { id: `${Date.now()}`, receivedAt: now, ...body };
+    const record = { id: `${Date.now()}`, receivedAt: now, contacted: false, ...body };
 
     const content = await fs.readFile(DATA_FILE, "utf8").catch(() => "[]");
     const list = JSON.parse(content || "[]");

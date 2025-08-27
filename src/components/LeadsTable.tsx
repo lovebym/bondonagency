@@ -10,6 +10,7 @@ type Lead = {
   message: string;
   budget?: string;
   source?: string;
+  contacted?: boolean;
 };
 
 export default function LeadsTable({ initialLeads }: { initialLeads: Lead[] }) {
@@ -17,9 +18,10 @@ export default function LeadsTable({ initialLeads }: { initialLeads: Lead[] }) {
   const [budget, setBudget] = React.useState("");
   const [from, setFrom] = React.useState("");
   const [to, setTo] = React.useState("");
+  const [rows, setRows] = React.useState<Lead[]>(initialLeads);
 
   const leads = React.useMemo(() => {
-    return initialLeads
+    return rows
       .filter((l) => {
         if (!query) return true;
         const q = query.toLowerCase();
@@ -38,7 +40,40 @@ export default function LeadsTable({ initialLeads }: { initialLeads: Lead[] }) {
         return d >= after && d <= before;
       })
       .sort((a, b) => (a.receivedAt < b.receivedAt ? 1 : -1));
-  }, [initialLeads, query, budget, from, to]);
+  }, [rows, query, budget, from, to]);
+
+  function toggleContacted(id: string) {
+    setRows((prev) => prev.map((r) => (r.id === id ? { ...r, contacted: !r.contacted } : r)));
+  }
+
+  function exportCSV() {
+    const headers = ["id","receivedAt","name","email","budget","contacted","message"].join(",");
+    const lines = leads.map((l) => [
+      l.id,
+      l.receivedAt,
+      escapeCSV(l.name),
+      l.email,
+      escapeCSV(l.budget || ""),
+      String(Boolean(l.contacted)),
+      escapeCSV(l.message),
+    ].join(","));
+    const csv = [headers, ...lines].join("\n");
+    const blob = new Blob([csv], { type: "text/csv;charset=utf-8;" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = `leads-${new Date().toISOString().slice(0,10)}.csv`;
+    a.click();
+    URL.revokeObjectURL(url);
+  }
+
+  function escapeCSV(val: string) {
+    const v = String(val ?? "");
+    if (v.includes(",") || v.includes("\n") || v.includes('"')) {
+      return '"' + v.replace(/"/g, '""') + '"';
+    }
+    return v;
+  }
 
   return (
     <div className="p-4">
@@ -68,7 +103,10 @@ export default function LeadsTable({ initialLeads }: { initialLeads: Lead[] }) {
           className="h-10 rounded-md border border-foreground/20 bg-transparent px-3 text-sm outline-none focus:ring-2 focus:ring-foreground/20"
         />
       </div>
-      <div className="mt-4 overflow-x-auto">
+      <div className="mt-4 flex items-center gap-3">
+        <button onClick={exportCSV} className="h-9 px-3 rounded-md border border-foreground/20 text-xs hover:bg-foreground/5">Exportera CSV</button>
+      </div>
+      <div className="mt-3 overflow-x-auto">
         <table className="w-full text-sm">
           <thead>
             <tr className="text-left border-b border-foreground/10">
@@ -76,6 +114,7 @@ export default function LeadsTable({ initialLeads }: { initialLeads: Lead[] }) {
               <th className="py-2 pr-4">Namn</th>
               <th className="py-2 pr-4">E‑post</th>
               <th className="py-2 pr-4">Budget</th>
+              <th className="py-2 pr-4">Kontaktad</th>
               <th className="py-2 pr-4">Meddelande</th>
             </tr>
           </thead>
@@ -90,6 +129,11 @@ export default function LeadsTable({ initialLeads }: { initialLeads: Lead[] }) {
                   </a>
                 </td>
                 <td className="py-2 pr-4 whitespace-nowrap">{l.budget || "—"}</td>
+                <td className="py-2 pr-4 whitespace-nowrap">
+                  <button onClick={() => toggleContacted(l.id)} className="h-7 px-2 rounded-md border border-foreground/20 text-xs hover:bg-foreground/5">
+                    {l.contacted ? "Ja" : "Nej"}
+                  </button>
+                </td>
                 <td className="py-2 pr-4 min-w-[300px] max-w-[520px]">
                   <div className="line-clamp-3">{l.message}</div>
                 </td>

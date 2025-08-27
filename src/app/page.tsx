@@ -1,6 +1,9 @@
 import Link from "next/link";
 import Section from "@/components/Section";
 import ContactForm from "@/components/ContactForm";
+import ThemeToggle from "@/components/ThemeToggle";
+import HeroHeading from "@/components/HeroHeading";
+import HeroCTAs from "@/components/HeroCTAs";
 
 export default function Home() {
   return (
@@ -16,6 +19,7 @@ export default function Home() {
             <Link className="hover:opacity-80" href="#case">Case</Link>
             <Link className="hover:opacity-80" href="#kontakt">Kontakt</Link>
           </nav>
+          <div className="hidden sm:block"><ThemeToggle /></div>
         </div>
       </header>
 
@@ -24,27 +28,12 @@ export default function Home() {
         <Section className="py-16 sm:py-24">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
             <div>
-              <h1 className="text-3xl sm:text-5xl font-semibold leading-tight">
-                AI‑driven kreativ och digital marknadsföring som skalar resultat
-              </h1>
+              <HeroHeading />
               <p className="mt-4 text-base sm:text-lg text-foreground/80 max-w-prose">
                 Vi kombinerar strategi, kreativ produktion och analys med AI för att maximera
                 effekt från första dagen. Färre silos, snabbare leveranser, bättre ROI.
               </p>
-              <div className="mt-6 flex items-center gap-3">
-                <Link
-                  href="#kontakt"
-                  className="inline-flex h-10 items-center rounded-md bg-foreground px-4 text-background text-sm font-medium hover:opacity-90 transition-transform hover:-translate-y-0.5"
-                >
-                  Boka intro
-                </Link>
-                <Link
-                  href="#tjanster"
-                  className="inline-flex h-10 items-center rounded-md border border-foreground/20 px-4 text-sm font-medium hover:bg-foreground/5 transition-colors"
-                >
-                  Se hur vi jobbar
-                </Link>
-              </div>
+              <HeroCTAs />
             </div>
             <div className="md:justify-self-end">
               <div className="h-48 sm:h-64 md:h-72 aspect-[4/3] rounded-xl border border-foreground/10 bg-gradient-to-br from-foreground/5 to-transparent animate-pulse" />
