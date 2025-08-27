@@ -2,20 +2,28 @@ import Section from "@/components/Section";
 
 const faqs = [
   {
-    q: "Hur snabbt kan vi komma igång?",
-    a: "Ofta inom 1–2 veckor. Vi startar med nuläge/mål, därefter hypoteser och första sprint.",
+    q: "Hur snabbt kommer vi igång?",
+    a: "Inom 1–2 veckor. Vi startar med mål, hypoteser och första sprint.",
+  },
+  {
+    q: "Vad ingår i paketen?",
+    a: "Strategi, kreativ produktion, distribution och analys. Antal kanaler/sprintar varierar.",
   },
   {
     q: "Vilka kanaler jobbar ni med?",
-    a: "Betald social/sök, e‑post/CRM, webb/landningssidor samt content för organiska kanaler.",
+    a: "Betald social/sök, e‑post/CRM och webb/landningssidor. Även organiskt content vid behov.",
   },
   {
-    q: "Jobbar ni på plats eller remote?",
-    a: "Främst remote men vi kan anpassa oss efter behov för workshops och större genomgångar.",
+    q: "Hur mäter ni resultat?",
+    a: "KPI:er sätts upfront (ROAS, CPA, SQL). Vi rapporterar och itererar varje sprint.",
   },
   {
-    q: "Hur mäter ni effekt?",
-    a: "Vi utgår från definierade KPI:er (t.ex. ROAS, CPA, SQL) och följer upp varje sprint.",
+    q: "Kan ni arbeta med vårt team/partners?",
+    a: "Ja. Vi pluggar in i befintliga flöden eller kör end‑to‑end.",
+  },
+  {
+    q: "Bindningstid?",
+    a: "Nej. Månadsvis med 30 dagars uppsägning.",
   },
 ];
 
