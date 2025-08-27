@@ -74,9 +74,9 @@ export default function Home() {
         <Section id="case" title="Case" subtitle="Snabba tester, mätbar effekt och iterativ förbättring.">
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
             {[
-              { title: "D2C: +42% ROAS", desc: "Annonsvarianter + landningssida med AI‑copy och UGC." },
-              { title: "B2B: +68% SQL", desc: "Innehållsmotor + multi‑touch nurture och SDR enablement." },
-              { title: "App: −35% CPA", desc: "Kreativ testning, stores‑optimering och funnel‑analys." },
+              { title: "D2C: +27% ROAS", desc: "Kreativa varianter per målgrupp + snabb landningssida → fler köp till lägre kostnad." },
+              { title: "B2B SaaS: 2× SQL, −30% CAC", desc: "Segmenterad content‑motor, multi‑touch nurture och SDR‑enablement." },
+              { title: "App: −25% CPA, +40% retention (D30)", desc: "TikTok/Meta‑hookar, store‑optimering och funnel‑analys med kontinuerliga tester." },
             ].map((c) => (
               <div key={c.title} className="rounded-lg border border-foreground/10 p-5">
                 <h3 className="text-base font-semibold">{c.title}</h3>
