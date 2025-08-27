@@ -4,6 +4,8 @@ import ContactForm from "@/components/ContactForm";
 import ThemeToggle from "@/components/ThemeToggle";
 import HeroHeading from "@/components/HeroHeading";
 import HeroCTAs from "@/components/HeroCTAs";
+import SocialProof from "@/components/SocialProof";
+import FAQ from "@/components/FAQ";
 
 export default function Home() {
   return (
@@ -40,6 +42,9 @@ export default function Home() {
             </div>
           </div>
         </Section>
+
+        {/* Social Proof */}
+        <SocialProof />
 
         {/* Tjänster / Pelare */}
         <Section id="tjanster" title="Vad vi optimerar" subtitle="Allt vi gör är byggt för hastighet, kvalitet och lärande.">
@@ -145,6 +150,9 @@ export default function Home() {
             </div>
         </div>
         </Section>
+
+        {/* FAQ */}
+        <FAQ />
       </main>
 
       <footer className="border-t border-foreground/10">
